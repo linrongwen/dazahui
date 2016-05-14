@@ -1,0 +1,200 @@
+<?php
+require("../../inc/header.php");
+
+/*
+		SoftName : EmpireBak Version 2010
+		Author   : wm_chief
+		Copyright: Powered by www.phome.net
+*/
+
+DoSetDbChar('utf8');
+E_D("DROP TABLE IF EXISTS `ecs_admin_log`;");
+E_C("CREATE TABLE `ecs_admin_log` (
+  `log_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `log_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `user_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `log_info` varchar(255) NOT NULL DEFAULT '',
+  `ip_address` varchar(15) NOT NULL DEFAULT '',
+  PRIMARY KEY (`log_id`),
+  KEY `log_time` (`log_time`),
+  KEY `user_id` (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=177 DEFAULT CHARSET=utf8");
+E_D("replace into `ecs_admin_log` values('1','1427320221','2','编辑权限管理: admin123','182.137.113.138');");
+E_D("replace into `ecs_admin_log` values('2','1427347226','2','删除会员账号: test','139.205.201.106');");
+E_D("replace into `ecs_admin_log` values('3','1427348422','2','编辑商店设置: ','139.205.201.106');");
+E_D("replace into `ecs_admin_log` values('4','1427349281','2','编辑商品: 迪奥红毒女士香水EDT 50ml','110.184.207.95');");
+E_D("replace into `ecs_admin_log` values('5','1427349281','2','编辑商品: 迪奥红毒女士香水EDT 50ml','110.184.207.95');");
+E_D("replace into `ecs_admin_log` values('6','1427350158','2','编辑文章: 推荐分享说明','139.205.201.106');");
+E_D("replace into `ecs_admin_log` values('7','1427350793','2','添加文章: 人人科技单页推广','139.205.201.106');");
+E_D("replace into `ecs_admin_log` values('8','1427356374','2','添加会员账号: henrydik','58.153.135.82');");
+E_D("replace into `ecs_admin_log` values('9','1427356392','2','编辑会员账号: henrydik','58.153.135.82');");
+E_D("replace into `ecs_admin_log` values('10','1427356514','2','添加商品: 测试','182.107.33.72');");
+E_D("replace into `ecs_admin_log` values('11','1427356582','2','编辑配送区域: 1','182.107.33.72');");
+E_D("replace into `ecs_admin_log` values('12','1427356745','2','安装支付方式: 新版本微信支付','182.107.33.72');");
+E_D("replace into `ecs_admin_log` values('13','1427357443','2','卸载支付方式: wx_new_jspay','182.107.33.72');");
+E_D("replace into `ecs_admin_log` values('14','1427412149','2','添加文章: 宝贝推荐','58.58.52.158');");
+E_D("replace into `ecs_admin_log` values('15','1427412438','2','编辑商品: 测试','117.66.101.232');");
+E_D("replace into `ecs_admin_log` values('16','1427414474','2','安装支付方式: 新版本微信支付电脑版','58.58.52.158');");
+E_D("replace into `ecs_admin_log` values('17','1427414491','2','卸载支付方式: cod','58.58.52.158');");
+E_D("replace into `ecs_admin_log` values('18','1427419480','2','添加用户红包: 1000186661','58.248.103.144');");
+E_D("replace into `ecs_admin_log` values('19','1427419712','2','编辑会员账号: qiqi1641','58.248.103.144');");
+E_D("replace into `ecs_admin_log` values('20','1427422014','2','编辑文章: 公司简介','182.137.113.138');");
+E_D("replace into `ecs_admin_log` values('21','1427424504','2','编辑商品: 测试','113.66.189.53');");
+E_D("replace into `ecs_admin_log` values('22','1427424688','2','编辑商品: 测试','113.66.189.53');");
+E_D("replace into `ecs_admin_log` values('23','1427425972','2','编辑商品: 测试','113.66.189.53');");
+E_D("replace into `ecs_admin_log` values('24','1427494139','2','编辑文章: 人人科技单页推广','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('25','1427494555','2','添加会员等级: s','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('26','1427495309','2','添加供货商管理: wwwwww','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('27','1427495448','2','编辑权限管理: ssssss','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('28','1427495676','2','编辑权限管理: ssssss','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('29','1427495953','2','编辑供货商管理: wwwwww','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('30','1427496283','2','编辑会员账号: ssjgd','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('31','1427496688','2','安装支付方式: 新版本微信支付','182.107.33.12');");
+E_D("replace into `ecs_admin_log` values('32','1427497105','2','卸载支付方式: wx_new_jspay','182.107.33.12');");
+E_D("replace into `ecs_admin_log` values('33','1427498814','2','编辑支付方式: 新版本微信支付电脑版','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('34','1427498851','2','卸载支付方式: alipay','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('35','1427498922','2','卸载支付方式: wx_new_qrcode','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('36','1427501285','2','编辑红包类型: 线下红包','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('37','1427501418','2','删除会员账号: qiqi1657','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('38','1427501471','2','编辑红包类型: 线下红包','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('39','1427501557','2','添加红包类型: ss','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('40','1427502307','2','添加用户红包: 1003174633','125.109.25.221');");
+E_D("replace into `ecs_admin_log` values('41','1427536643','2','批量上传商品: ','59.126.24.60');");
+E_D("replace into `ecs_admin_log` values('42','1427580235','2','安装支付方式: 支付宝','119.165.165.184');");
+E_D("replace into `ecs_admin_log` values('43','1427653859','2','编辑文章: 人人科技单页推广','14.153.245.152');");
+E_D("replace into `ecs_admin_log` values('44','1427656660','2','添加用户红包: 1003177261','222.223.213.34');");
+E_D("replace into `ecs_admin_log` values('45','1427657310','2','编辑会员账号: 13032616821','222.223.213.34');");
+E_D("replace into `ecs_admin_log` values('46','1427662909','2','编辑商品: 倩碧男士洁面乳（加强型）150ml','117.114.129.138');");
+E_D("replace into `ecs_admin_log` values('47','1427665243','2','编辑订单: 2015032907585','120.199.19.102');");
+E_D("replace into `ecs_admin_log` values('48','1427665445','2','编辑订单: 2015032780071,订单总金额由 74.00 变为 69.00','120.199.19.102');");
+E_D("replace into `ecs_admin_log` values('49','1427665742','2','编辑供货商管理: 上海供货商','120.199.19.102');");
+E_D("replace into `ecs_admin_log` values('50','1427665876','2','编辑权限管理: 上海供货商','120.199.19.102');");
+E_D("replace into `ecs_admin_log` values('51','1427665895','2','编辑供货商管理: 上海供货商','120.199.19.102');");
+E_D("replace into `ecs_admin_log` values('52','1427665905','2','编辑供货商管理: 上海供货商','120.199.19.102');");
+E_D("replace into `ecs_admin_log` values('53','1427669434','2','添加会员账号: yuyu','119.129.209.228');");
+E_D("replace into `ecs_admin_log` values('54','1427670771','2','编辑会员账号: yyyyyy','119.129.209.228');");
+E_D("replace into `ecs_admin_log` values('55','1427670800','2','编辑会员账号: yyyyyy','119.129.209.228');");
+E_D("replace into `ecs_admin_log` values('56','1427671255','2','添加会员账号: wwwwww','119.129.209.228');");
+E_D("replace into `ecs_admin_log` values('57','1427671851','5','编辑权限管理: 上海供货商','120.199.19.102');");
+E_D("replace into `ecs_admin_log` values('58','1427672024','2','添加会员账号: 11','119.129.209.228');");
+E_D("replace into `ecs_admin_log` values('59','1427672068','2','添加会员账号: 22','119.129.209.228');");
+E_D("replace into `ecs_admin_log` values('60','1427684960','2','编辑商店设置: ','110.152.239.123');");
+E_D("replace into `ecs_admin_log` values('61','1427743905','2','编辑会员账号: shuaiqiqixi','117.172.25.199');");
+E_D("replace into `ecs_admin_log` values('62','1427847149','2','添加文章: 圈子团-扫码加入-躺着赚钱','182.136.229.255');");
+E_D("replace into `ecs_admin_log` values('63','1427847210','2','编辑文章: 圈子团-扫码加入-躺着赚钱','182.136.229.255');");
+E_D("replace into `ecs_admin_log` values('64','1427847328','2','编辑文章: 圈子团-扫码加入-躺着赚钱','182.136.229.255');");
+E_D("replace into `ecs_admin_log` values('65','1427847383','2','编辑文章: 圈子团-扫码加入-躺着赚钱','182.136.229.255');");
+E_D("replace into `ecs_admin_log` values('66','1427847467','2','编辑文章: 扫码加入-躺着赚钱','182.136.229.255');");
+E_D("replace into `ecs_admin_log` values('67','1427847495','2','编辑文章: 扫码加入-躺着赚钱','182.136.229.255');");
+E_D("replace into `ecs_admin_log` values('68','1427847542','2','编辑文章: 躺着赚钱','182.136.229.255');");
+E_D("replace into `ecs_admin_log` values('69','1427847658','2','编辑文章: 圈子团-推广遍二维码-躺着赚钱','182.136.229.255');");
+E_D("replace into `ecs_admin_log` values('70','1427861354','2','删除权限管理: 上海供货商','139.205.204.126');");
+E_D("replace into `ecs_admin_log` values('71','1427861358','2','删除权限管理: qqqqqq','139.205.204.126');");
+E_D("replace into `ecs_admin_log` values('72','1427861363','2','删除权限管理: ssssss','139.205.204.126');");
+E_D("replace into `ecs_admin_log` values('73','1427863211','2','编辑文章: 圈子团-推广遍二维码-躺着赚钱','139.205.204.126');");
+E_D("replace into `ecs_admin_log` values('74','1427911609','2','删除商品类型: 香水','124.127.154.72');");
+E_D("replace into `ecs_admin_log` values('75','1427911642','2','编辑商品类型: 笔记本电脑','124.127.154.72');");
+E_D("replace into `ecs_admin_log` values('76','1428030613','2','安装支付方式: 银联在线支付','124.127.154.72');");
+E_D("replace into `ecs_admin_log` values('77','1428055673','2','删除文章: 3333','113.57.160.163');");
+E_D("replace into `ecs_admin_log` values('78','1428055677','2','删除文章: 111111','113.57.160.163');");
+E_D("replace into `ecs_admin_log` values('79','1428055680','2','删除文章: 1232323','113.57.160.163');");
+E_D("replace into `ecs_admin_log` values('80','1428056122','2','添加友情链接: 微博','113.57.160.163');");
+E_D("replace into `ecs_admin_log` values('81','1428058889','2','编辑商店设置: ','113.57.160.163');");
+E_D("replace into `ecs_admin_log` values('82','1428059307','2','编辑文章: 圈子团-推广遍二维码-躺着赚钱','113.57.160.163');");
+E_D("replace into `ecs_admin_log` values('83','1428059555','2','编辑在线调查: 您从哪里知道我们的网站','113.57.160.163');");
+E_D("replace into `ecs_admin_log` values('84','1428059564','2','编辑在线调查: 朋友','113.57.160.163');");
+E_D("replace into `ecs_admin_log` values('85','1428060836','2','添加会员账号: xiasw','113.57.160.163');");
+E_D("replace into `ecs_admin_log` values('86','1428115826','2','安装配送方式: 上门取货','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('87','1428115981','2','卸载支付方式: alipay','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('88','1428121294','2','添加属性: 颜色','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('89','1428121337','2','添加商品: ','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('90','1428121353','2','添加商品: ','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('91','1428121388','2','编辑商品: 000000000000','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('92','1428121389','2','编辑商品: 000000000000','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('93','1428121494','2','编辑商店设置: ','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('94','1428121715','2','编辑商品分类: 彩妆','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('95','1428121781','2','添加商品: 12044','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('96','1428121812','2','编辑商品: 12044','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('97','1428122308','2','编辑属性: 颜色','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('98','1428122442','2','编辑商品: 12044','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('99','1428122443','2','编辑商品: 12044','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('100','1428202111','2','添加配送区域: 新野县城','113.57.160.161');");
+E_D("replace into `ecs_admin_log` values('101','1428202158','2','编辑配送区域: 新野县城','113.57.160.161');");
+E_D("replace into `ecs_admin_log` values('102','1428202171','2','编辑配送区域: 新野县城','113.57.160.161');");
+E_D("replace into `ecs_admin_log` values('103','1428202232','2','添加配送区域: 南阳','113.57.160.161');");
+E_D("replace into `ecs_admin_log` values('104','1428202294','2','编辑配送区域: 新野县城','113.57.160.161');");
+E_D("replace into `ecs_admin_log` values('105','1428202307','2','编辑配送区域: 新野县城','113.57.160.161');");
+E_D("replace into `ecs_admin_log` values('106','1428202493','2','编辑会员账号: xiasw','113.57.160.161');");
+E_D("replace into `ecs_admin_log` values('107','1428209345','2','安装支付方式: 支付宝','220.162.89.218');");
+E_D("replace into `ecs_admin_log` values('108','1428237329','2','编辑商品: 12044','113.57.160.161');");
+E_D("replace into `ecs_admin_log` values('109','1428237669','2','添加会员余额: xiasw','113.57.160.161');");
+E_D("replace into `ecs_admin_log` values('110','1428311395','2','添加会员余额: llkk','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('111','1428312188','2','添加会员余额: mmkk','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('112','1428313670','2','添加会员余额: ffdd','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('113','1428314701','2','编辑订单: 2015040737347','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('114','1428315299','2','编辑订单: 2015040737347','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('115','1428316053','2','编辑订单: 2015040712432','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('116','1428316390','2','编辑用户评论: 回复','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('117','1428317199','2','编辑会员账号: ffdd','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('118','1428317919','2','编辑订单: 2015040739071','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('119','1428317961','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('120','1428318725','2','安装配送方式: 中通速递','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('121','1428318769','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('122','1428319071','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('123','1428319316','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('124','1428319406','2','安装配送方式: 顺丰速运','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('125','1428319451','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('126','1428319554','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('127','1428320032','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('128','1428320036','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('129','1428320284','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('130','1428320609','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('131','1428320807','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('132','1428320905','2','安装配送方式: 宅急送','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('133','1428320918','2','添加配送区域: 中国','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('134','1428321181','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('135','1428321406','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('136','1428321599','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('137','1428321745','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('138','1428321893','2','编辑订单: 2015040665569','113.57.160.174');");
+E_D("replace into `ecs_admin_log` values('139','1428359494','2','编辑文章: 单品推广','218.89.47.105');");
+E_D("replace into `ecs_admin_log` values('140','1428359829','2','删除文章: 宝贝推荐','218.89.47.105');");
+E_D("replace into `ecs_admin_log` values('141','1428360003','2','编辑文章: 人人科技单页推广','218.89.47.105');");
+E_D("replace into `ecs_admin_log` values('142','1428360273','2','编辑文章: 人人科技单页推广','218.89.47.105');");
+E_D("replace into `ecs_admin_log` values('143','1428370687','2','编辑文章: 人人科技单页推广','218.89.47.105');");
+E_D("replace into `ecs_admin_log` values('144','1428371078','2','编辑会员账号: 5623','163.177.136.84');");
+E_D("replace into `ecs_admin_log` values('145','1428371371','2','编辑会员账号: aaaaaa','163.177.136.84');");
+E_D("replace into `ecs_admin_log` values('146','1428372766','2','编辑文章: 圈子团-推广遍二维码-躺着赚钱','218.89.47.105');");
+E_D("replace into `ecs_admin_log` values('147','1428372879','2','编辑文章: 圈子团-推广遍二维码-躺着赚钱','218.89.47.105');");
+E_D("replace into `ecs_admin_log` values('148','1428374070','2','编辑商店设置: ','113.57.160.169');");
+E_D("replace into `ecs_admin_log` values('149','1428378565','2','编辑商店设置: ','113.57.160.169');");
+E_D("replace into `ecs_admin_log` values('150','1428378646','2','编辑商店设置: ','113.57.160.169');");
+E_D("replace into `ecs_admin_log` values('151','1428379072','2','编辑文章: 用户协议','113.57.160.169');");
+E_D("replace into `ecs_admin_log` values('152','1428379246','2','编辑文章: 用户协议','113.57.160.169');");
+E_D("replace into `ecs_admin_log` values('153','1428379722','2','删除文章: 如何分辨原装电池','113.57.160.169');");
+E_D("replace into `ecs_admin_log` values('154','1428379724','2','删除文章: 如何分辨水货手机 ','113.57.160.169');");
+E_D("replace into `ecs_admin_log` values('155','1428379729','2','删除文章: 如何享受全国联保','113.57.160.169');");
+E_D("replace into `ecs_admin_log` values('156','1428379740','2','删除商品分类: ','113.57.160.169');");
+E_D("replace into `ecs_admin_log` values('157','1428379828','2','添加文章分类: 化妆品','113.57.160.169');");
+E_D("replace into `ecs_admin_log` values('158','1428379926','2','添加文章: 美白','113.57.160.169');");
+E_D("replace into `ecs_admin_log` values('159','1428380011','2','编辑文章分类: 化妆品','113.57.160.169');");
+E_D("replace into `ecs_admin_log` values('160','1428428691','2','编辑文章: 人人科技单页推广','127.0.0.1');");
+E_D("replace into `ecs_admin_log` values('161','1428428747','2','编辑文章: 单页推广','127.0.0.1');");
+E_D("replace into `ecs_admin_log` values('162','1428428853','2','编辑商店设置: ','127.0.0.1');");
+E_D("replace into `ecs_admin_log` values('163','1428428893','2','编辑商店设置: ','127.0.0.1');");
+E_D("replace into `ecs_admin_log` values('164','1428429362','2','编辑支付方式: 货到付款','127.0.0.1');");
+E_D("replace into `ecs_admin_log` values('165','1428429439','2','添加: znrr01','127.0.0.1');");
+E_D("replace into `ecs_admin_log` values('166','1428609236','2','编辑权限管理: admin','127.0.0.1');");
+E_D("replace into `ecs_admin_log` values('167','1428609272','2','回收商品: 12044','127.0.0.1');");
+E_D("replace into `ecs_admin_log` values('168','1428609286','2','批量回收商品: ','127.0.0.1');");
+E_D("replace into `ecs_admin_log` values('169','1428609340','2','批量删除商品: ','127.0.0.1');");
+E_D("replace into `ecs_admin_log` values('170','1428609461','2','编辑商品: 娇韵诗超V型纤容紧致瘦脸面膜75ml','127.0.0.1');");
+E_D("replace into `ecs_admin_log` values('171','1428622906','1','安装支付方式: 新版本微信支付','123.174.133.249');");
+E_D("replace into `ecs_admin_log` values('172','1428623685','1','编辑商店设置: ','123.174.133.249');");
+E_D("replace into `ecs_admin_log` values('173','1428624562','1','编辑商品: 人人科技测试2','123.174.133.249');");
+E_D("replace into `ecs_admin_log` values('174','1428627017','1','卸载支付方式: alipay','123.174.133.249');");
+E_D("replace into `ecs_admin_log` values('175','1428627023','1','卸载支付方式: alipay1','123.174.133.249');");
+E_D("replace into `ecs_admin_log` values('176','1428627045','1','卸载配送方式: 上门取货','123.174.133.249');");
+
+require("../../inc/footer.php");
+?>
