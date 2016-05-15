@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>{$page_title}</title>
+<meta name="keywords" content="分销员的店铺" />
+<meta name="description" content="分销员的店铺" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<link href="{$ectouch_themes}/images/touch-icon.png" rel="apple-touch-icon-precomposed" />
+<link href="{$ectouch_themes}/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="{$ectouch_themes}/ectouch.css?v=2014" rel="stylesheet" type="text/css" />
+<link href="{$ectouch_themes}/css/foot.css" rel="stylesheet" type="text/css" />
+{insert_scripts files='common.js'}
+<script type="text/javascript" src="{$ectouch_themes}/js/TouchSlide.js"></script>
+<script type="text/javascript" src="{$ectouch_themes}/js/jquery.min.js"></script>
+<script type="text/javascript" src="{$ectouch_themes}/js/ectouch.js"></script>
+</head>
+<body>
+
+<!--播放器广告s-->
+<div id="focus" class="focus region">
+  <div class="hd">
+    <ul>
+    </ul>
+  </div>
+  <div class="bd">
+    <!-- TemplateBeginEditable name="touch首页广告区域" -->
+<!-- #BeginLibraryItem "/library/ad_position.lbi" -->
+<script src="{$ectouch_themes}/js/slides.min.jquery.js"></script>
+    <script language="javascript">
+    	$(function(){
+			$('.indexBanner .slides').slidesjs({width: 640,height: 312,start:1,navigation: true,play: {interval: 5000,auto: true}});
+		})
+    </script>
+
+<style>
+.indexBanner {position:relative;overflow:hidden; z-index:100; margin:0px 0px 20px 0px; padding:0px; border:0px solid #e7e7e7; box-shadow:0px 0px 3px #e7e7e7; border-radius:0px;border-bottom:1px solid #dadada;}
+.indexBanner .slides {position:relative;}
+.indexBanner .slides_container {overflow:hidden;}
+.indexBanner .slides_container{}
+.indexBanner img{ width:100%;}
+.indexBanner .slides_container .slide{ display:block; text-align:left;}
+.indexBanner .caption{ position:absolute; bottom:0px; height:42px; width:100%; left:0px; background:url(../images/opk_black.png) repeat-x 0px 0px; font-size:1em; text-align:center; color:#fff; line-height:42px;}
+.indexBanner .slidesjs-pagination {position:absolute; bottom:10px; left:44%; z-index:99;}
+.indexBanner .slidesjs-pagination li {float:left;margin:0 5px;list-style:none;}
+.indexBanner .slidesjs-pagination li a {display:block;width:8px;height:8px; line-height:16px;padding-top:0px;float:left; text-align:center;overflow:hidden; background:#fff; text-indent:-400px; border-radius:8px;}
+.indexBanner .slidesjs-pagination li a.active,.indexBanner .slidesjs-pagination li a:hover.active {background:#C33;}
+.indexBanner .slidesjs-pagination li a:hover { background: #C33;}
+</style>
+      {if $sliders}
+       <div class="indexBanner">    	
+            <div class="slides">     
+            {foreach from=$sliders item=slide}
+                <div class="slide">
+                    <a href="{if $slide.ad_link}{$slide.ad_link}{else}#{/if}"><img src="{$slide.img}" class="slideimg"/></a>
+                </div>             
+            {/foreach}
+             </div>
+        </div>
+       {/if}
+ <!-- #EndLibraryItem -->
+<!-- TemplateEndEditable -->
+  </div>
+</div>
+<script type="text/javascript">
+TouchSlide({ 
+	slideCell:"#focus",
+	titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+	mainCell:".bd ul", 
+	effect:"leftLoop", 
+	autoPlay:true,//自动播放
+	autoPage:true //自动分页
+});
+</script>
+<!--播放器广告e-->
+<div class="blank2"> </div>
+  <!--快速连接s-->
+  <div class="region row row_category">
+    <ul class="flex flex-f-row">
+    
+	  <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+      <li class="flex_in"> <a href="{$nav.url}"{if $nav.opennew eq 1} target="_blank"{/if} title="{$nav.name}"> <img src="{$nav.pic}" /> </a>
+        <p> {$nav.name} </p>
+      </li>
+      <!-- {if $smarty.foreach.nav_middle_list.iteration % 4 eq 0 and $smarty.foreach.nav_middle_list.iteration neq $smarty.foreach.nav_middle_list.total} 菜单取模 -->
+      </ul><ul class="flex flex-f-row">
+      <!-- {/if} -->
+      <!-- {/foreach} -->
+    </ul>
+  </div>
+  <!--快速连接e-->
+<!--content s-->
+<div id=content class="wrap" style="margin:0; padding:0">
+
+<div class="blank2"></div>
+<div class="item_show_box2 box1 region" style="overflow:hidden">
+    <div id="picScroll2" class="picScroll2">
+         <div class="bd1">
+            <div class="hot-tit">最 新 商 品</div>
+            <ul>
+             <!--{foreach from=$new_goods item=goods name=best_goods}-->
+              <li style="clear:both">
+                <div style="clear:both"><img  src="{$site_url}{$goods.thumb}" style="position:relative;" onClick="javascript:location.href='{$goods.url}' " width="100%"></div>
+                <div>
+                  <dt>{$goods.name|escape:html}</dt>
+                  <dl>
+                   <dd class="pinfo" >
+                     惊爆价 <span>{$goods.shop_price}</span>   
+                     <br> <font style="font-size:8px; color:#999">市场价</font>&nbsp; <del style="font-size: .675rem; color:#999">{$goods.market_price}</del>
+                   </dd>
+                   <dd class="buyer"><input name="button" name="buy-btn" value="立即购买" onClick="javascript:location.href='{$goods.url}'"></dd>
+				 <dl>               
+                </div>
+              </li>
+              <!--{/foreach}-->
+            </ul></div>
+    </div>
+  </div>
+
+<div class="item_show_box2 box1 region" style="margin-top:20px">
+    <div class="picScroll2">
+         <div class="bd1">
+            <div class="hot-tit">热 卖 商 品</div>
+           <ul>
+             <!--{foreach from=$hot_goods item=goods name=best_goods}-->
+                <li style="clear:both">
+                <div style="clear:both"><img  src="{$site_url}{$goods.thumb}" style="position:relative;" onClick="javascript:location.href='{$goods.url}' " width="100%"></div>
+                <div>
+                  <dt>{$goods.name|escape:html}</dt>
+                  <dl>
+                   <dd class="pinfo" >
+                     惊爆价 <span>{$goods.shop_price}</span>   
+                     <br> <font style="font-size:8px; color:#999">市场价</font>&nbsp; <del style="font-size: .675rem; color:#999">{$goods.market_price}</del>
+                   </dd>
+                   <dd class="buyer"><input name="button" name="buy-btn" value="立即购买" onClick="javascript:location.href='{$goods.url}'"></dd>
+				 <dl>               
+                </div>
+              </li>
+              <!--{/foreach}-->
+            </ul></div>
+    </div>
+    <div style="height:80px;"></div>
+  </div>
+<!--content e--> 
+
+<!--搜索弹出框-->
+<div id="main-search" class="main-search">
+<div class="hd"> <span class="ico_08 close"> 关闭 </span> </div>
+<div class="bd">
+  <div class="search_box">
+    <form action="search.php?" method="post" id="searchForm" name="searchForm">
+      <div class="content">
+        <input class="text" type="search" name="keywords" id="keywordBox" autofocus />
+        <button class="ico_07" type="submit" value="搜 索" onclick="return check('keywordBox')"></button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+window.onload = function(){
+  $('#menu').css('display','');
+}
+$(function() {
+	$('nav#menu').mmenu();
+	$('#get_search_box').click(function(){
+		$(".mm-page").children('div').hide();
+		$("#main-search").css('position','fixed').css('top','0px').css('width','100%').css('z-index','999').show();
+		//$('#keywordBox').focus();
+	})
+	$("#main-search .close").click(function(){
+		$(".mm-page").children('div').show();
+		$("#main-search").hide();
+	})
+});
+</script>
+{if $pid}
+<!-- #BeginLibraryItem "/library/page_gz.lbi" --><!-- #EndLibraryItem -->
+{else}
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+{/if}
+<!-- #BeginLibraryItem "/library/link_to.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>
