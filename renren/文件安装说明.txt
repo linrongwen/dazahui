@@ -1,0 +1,4 @@
+文件安装说明：
+1.上传源码至您的服务器,导入数据库文件goodziyuan.sql
+2.修改数据库配置文件：data/config.php
+2.后台地址：首页登录即可 账号 goodziyuan 密码 goodziyuan 进入后清除缓存
